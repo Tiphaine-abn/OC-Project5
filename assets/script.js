@@ -18,10 +18,13 @@ const slides = [
 ]
 
 document.addEventListener("DOMContentLoaded", function () {
-	// Sélection des flèches et de la bannière
+	// Récupération des flèches et de la bannière pour pouvoir les modifiers
 	const arrowLeft = document.querySelector(".arrow_left");
+	console.log(arrowLeft)
 	const arrowRight = document.querySelector(".arrow_right");
-	const bannerImg = document.getElementById("banner-img");
+	console.log(arrowRight)
+	let bannerImg = document.getElementById("banner-img");
+	console.log(bannerImg)
 
 	// Liste des slides du carrousel
 	const slides = [
@@ -30,6 +33,17 @@ document.addEventListener("DOMContentLoaded", function () {
 		"./assets/images/slideshow/slide3.jpg",
 		"./assets/images/slideshow/slide4.png"
 	];
+
+	// Ajout des event listeners sur les flèches
+	arrowRight.addEventListener("click", function () {
+		currentIndex = (currentIndex + 1) % slides.length;
+		updateCarousel(currentIndex);
+	});
+
+	arrowLeft.addEventListener("click", function () {
+		currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+		updateCarousel(currentIndex);
+	});
 
 	// Générer les bullet points
 	const dotsContainer = document.querySelector(".dots");
@@ -57,15 +71,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	// Initialisation de l'index courant
 	let currentIndex = 0;
-
-	// Ajout des écouteurs d'événements
-	arrowRight.addEventListener("click", function () {
-		currentIndex = (currentIndex + 1) % slides.length;
-		updateCarousel(currentIndex);
-	});
-
-	arrowLeft.addEventListener("click", function () {
-		currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-		updateCarousel(currentIndex);
-	});
 });

@@ -24,7 +24,7 @@ const slides = [
 ];
 console.log("slides : ", slides);
 
-/* Etape 1: Récupération des éléments du DOM */
+/* Récupération des éléments du DOM */
 const img = document.querySelector(".banner-img");
 console.log("IMG : ", img);
 const p = document.querySelector(".tagLine");
@@ -37,7 +37,7 @@ const dots = document.querySelector(".dots");
 console.log("dots : ", dots);
 // sélection des éléments nécessaire au fonctionnement du carrousel et les affiche dans la console pour vérification.
 
-/* Etape 3. Ajout des bullet points au slider */
+/* Ajout des bullet points au slider */
 // Initialisation des dots
 for (let index = 0; index < slides.length; index++) {
 	const dotDiv = document.createElement("div");
@@ -49,7 +49,7 @@ for (let index = 0; index < slides.length; index++) {
 }
 // génère des points pour chaque diapositive et met en évidence le premier.
 
-/* Etapes 2, 4 et 5 : Ajout des Event Listeners sur les flèches; Modification du slide au clic ; Défilement infini sur le carrousel */
+/* Ajout des Event Listeners sur les flèches; Modification du slide au clic ; Défilement infini sur le carrousel */
 // Flèche droite
 arrowRight.addEventListener("click", () => {
 	console.log("La flèche droite est cliquée !");

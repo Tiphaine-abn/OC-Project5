@@ -62,7 +62,7 @@ arrowRight.addEventListener("click", () => {
 	}
 	slideDots[currentIndex].classList.add("dot_selected");
 	// Mise à jour de l'image et de la légende
-	img.src = "/assets/images/slideshow/" + slides[currentIndex].image;
+	img.src = "assets/images/slideshow/" + slides[currentIndex].image;
 	p.innerHTML = slides[currentIndex].tagLine;
 	console.log("idx final = ", currentIndex);
 	console.log(slideDots);
@@ -81,7 +81,7 @@ arrowLeft.addEventListener("click", () => {
 	}
 	slideDots[currentIndex].classList.add("dot_selected");
 	// Mise à jour de l'image et de la légende
-	img.src = "/assets/images/slideshow/" + slides[currentIndex].image;
+	img.src = "assets/images/slideshow/" + slides[currentIndex].image;
 	p.innerHTML = slides[currentIndex].tagLine;
 	console.log("idx final = ", currentIndex);
 	console.log(slideDots);
